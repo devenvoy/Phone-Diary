@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,41 +9,121 @@
     android:paddingHorizontal="40dp"
     tools:context=".LoginPage">
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textColorHint="#302B63"
+        app:boxBackgroundColor="#4D626970"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxStrokeColor="@drawable/text_input_outline"
+        app:boxStrokeWidthFocused="3dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="#302B63"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@android:color/holo_red_light"
+        app:hintTextColor="#302B63">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textAutoCorrect"
+            android:textColor="#B3000000" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pass Word"
+        android:textColorHint="#302B63"
+        app:boxBackgroundColor="#4D626970"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxStrokeColor="@drawable/text_input_outline"
+        app:boxStrokeWidthFocused="3dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="#302B63"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@android:color/holo_red_light"
+        app:hintTextColor="#302B63">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textAutoCorrect"
+            android:textColor="#B3000000" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/stayLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Remember me" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="forgot password?"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/newlogin"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/bg_login_btn"
         android:onClick="newlog"
-        android:text="Make an Account" />
+        android:text="Sign in" />
 
 
-<!--    <RadioGroup-->
-<!--        android:id="@+id/radiogroup"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal">-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_login_btn"
+        android:onClick="signup"
+        android:text="Sign Up" />
 
-<!--        <RadioButton-->
-<!--            android:id="@+id/male"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:text="male" />-->
 
-<!--        <RadioButton-->
-<!--            android:id="@+id/female"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:text="female" />-->
-<!--    </RadioGroup>-->
+    <!--    <RadioGroup-->
+    <!--        android:id="@+id/radiogroup"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal">-->
 
-<!--    <CheckBox-->
-<!--        android:id="@+id/panipuri"-->
-<!--        android:text="Pani Puri"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"/>-->
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/male"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:text="male" />-->
+
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/female"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:text="female" />-->
+    <!--    </RadioGroup>-->
 
 
 </LinearLayout>

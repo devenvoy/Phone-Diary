@@ -103,6 +103,9 @@ class SignUp : AppCompatActivity() {
             val pass: String = reg_password.text.toString()
             val cpass: String = reg_cpassword.text.toString()
 
+            var data = MyDatabsehelper(this@SignUp)
+
+
 
             canLogin = if (fname.isEmpty()) {
                 reg_fname.error = "Fill this field"
@@ -120,7 +123,13 @@ class SignUp : AppCompatActivity() {
                 reg_email.error = "Fill this field"
                 false
             } else {
-                true
+                val cur = data.checkUser(email)
+                if (cur.moveToNext()) {
+                    Toast.makeText(this@SignUp, "User available", Toast.LENGTH_SHORT).show()
+                    false
+                } else {
+                    true
+                }
             }
             canLogin = if (phono.isEmpty()) {
                 reg_phone.error = "Fill this field"
@@ -139,6 +148,8 @@ class SignUp : AppCompatActivity() {
                 if (pass == cpass) {
 
                     var myDatabsehelper = MyDatabsehelper(this@SignUp)
+
+
                     // this will call database class with  insertdata function to  store offline data in table
                     myDatabsehelper.insertdata(fullname, email, phono, pass)
 
