@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DemoOffline DataBase</string>
+    <string name="label">Enetr Your Name</string>
+    <string name="label1">Enetr Your Name</string>
+    <string name="sname">Enetr Your Name</string>
+    <string name="smail">Enetr Your Email</string>
+    <string name="spassword">Enetr Your Password</string>
+    <string name="snumber">Enetr Your Number</string>
+    <string name="sid">Enetr Your Id</string>
+    <string name="fetch">Please Wait..\nFetching Data...</string>
+</resources>
