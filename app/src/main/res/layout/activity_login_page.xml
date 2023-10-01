@@ -40,7 +40,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Pass Word"
+        android:hint="PassWord"
         android:textColorHint="#302B63"
         app:boxBackgroundColor="#4D626970"
         app:boxBackgroundMode="outline"
@@ -48,7 +48,7 @@
         app:boxCornerRadiusTopEnd="15dp"
         app:boxStrokeColor="@drawable/text_input_outline"
         app:boxStrokeWidthFocused="3dp"
-        app:endIconMode="clear_text"
+        app:endIconMode="password_toggle"
         app:endIconTint="#302B63"
         app:errorEnabled="true"
         app:helperTextTextColor="@android:color/holo_red_light"

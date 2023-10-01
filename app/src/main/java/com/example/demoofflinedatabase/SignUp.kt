@@ -31,6 +31,7 @@ class SignUp : AppCompatActivity() {
     lateinit var reg_cpassword: EditText
 
     override fun onBackPressed() {
+        startActivity(Intent(this@SignUp, LoginPage::class.java))
         finish()
     }
 
@@ -50,10 +51,14 @@ class SignUp : AppCompatActivity() {
         passlay = findViewById(R.id.passlay)
         cpasslay = findViewById(R.id.cpasslay)
         emaillay = findViewById(R.id.emaillay)
+
         exit.setOnClickListener {
+            startActivity(Intent(this@SignUp, LoginPage::class.java))
             finish()
         }
+
         logintxt.setOnClickListener {
+            startActivity(Intent(this@SignUp, LoginPage::class.java))
             finish()
         }
 
@@ -153,15 +158,14 @@ class SignUp : AppCompatActivity() {
                     // this will call database class with  insertdata function to  store offline data in table
                     myDatabsehelper.insertdata(fullname, email, phono, pass)
 
-                    // if validation correct than add record in table and goes to HomePage
-                    startActivity(Intent(this@SignUp, HomePage::class.java))
+                    // if validation correct than add record in table and goes to Login Page for login
                     Toast.makeText(this@SignUp, "Login Successful", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@SignUp, LoginPage::class.java))
+                    finish()
                 } else {
                     cpasslay.helperText = "Password did not match"
                 }
             } else {
-
-
                 Toast.makeText(this@SignUp, "Fill form correctly", Toast.LENGTH_SHORT).show()
             }
         }
