@@ -11,7 +11,6 @@ import com.google.android.material.textfield.TextInputEditText
 
 
 class LoginPage : AppCompatActivity() {
-    var gender = "male";
 
     lateinit var uname: TextInputEditText
     lateinit var upass: TextInputEditText

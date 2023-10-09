@@ -59,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/bg_login_btn"
         android:onClick="newlog"
         android:text="save" />
