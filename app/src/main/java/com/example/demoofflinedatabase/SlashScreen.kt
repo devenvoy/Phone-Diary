@@ -22,13 +22,12 @@ class SlashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_slash_screen)
 
+        val testdb = MyDatabsehelper(this@SlashScreen)
 
         Handler().postDelayed({
             sp = getSharedPreferences("LoggedData", MODE_PRIVATE)
             editor = sp.edit()
-
             if (sp.getBoolean("StayLogged", false)) {
-                val testdb = TestDb(this@SlashScreen)
                 testdb.TestLog()
                 startActivity(Intent(this@SlashScreen, HomePage::class.java))
                 finish()

@@ -17,13 +17,6 @@ class LoginPage : AppCompatActivity() {
     lateinit var upass: TextInputEditText
     lateinit var stayLog: CheckBox
 
-    companion object {
-        var array = ArrayList<MydataClass>()
-
-    }
-
-
-    var dbhelper = TestDb(this@LoginPage)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_page)
@@ -46,18 +39,17 @@ class LoginPage : AppCompatActivity() {
                 editor.putBoolean("StayLogged", true)
                 editor.apply()
             }
+            editor.putInt("uid", cu.getInt(0))
             editor.putString("Name", cu.getString(1))
             editor.putString("Email", cu.getString(2))
             editor.putString("Phone", cu.getString(3))
             editor.apply()
-            startActivity(Intent(this@LoginPage, HomePage::class.java))
-            dbhelper.TestLog()
+            mydb.TestLog()
             Toast.makeText(this@LoginPage, "LOGIN Successful", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@LoginPage, HomePage::class.java))
             finish()
-
         } else {
             Toast.makeText(this@LoginPage, "User-not Fount", Toast.LENGTH_SHORT).show()
-
         }
 
     }

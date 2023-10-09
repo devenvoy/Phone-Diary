@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Name"
+        android:textColorHint="#302B63"
+        app:boxBackgroundColor="#4D626970"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxStrokeColor="@drawable/text_input_outline"
+        app:boxStrokeWidthFocused="3dp"
+        app:hintTextColor="#302B63">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textAutoCorrect"
+            android:textColor="#B3000000" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Number"
+        android:textColorHint="#302B63"
+        app:boxBackgroundColor="#4D626970"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxStrokeColor="@drawable/text_input_outline"
+        app:boxStrokeWidthFocused="3dp"
+        app:hintTextColor="#302B63">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textAutoCorrect"
+            android:textColor="#B3000000" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_login_btn"
+        android:onClick="newlog"
+        android:text="save" />
+
+
+</LinearLayout>
